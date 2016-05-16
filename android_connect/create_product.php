@@ -9,11 +9,23 @@
 $response = array();
 
 // check for required fields
-if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['description'])) {
+if (isset($_POST['mesaNo']) && isset($_POST['date']) 
+    && isset($_POST['plat1']) && isset($_POST['plat1price'])
+    && isset($_POST['plat2']) && isset($_POST['plat2price'])
+    && isset($_POST['plat3']) && isset($_POST['plat3price'])
+    && isset($_POST['bebida']) && isset($_POST['bebidaprice'])
+    ) {
     
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-    $description = $_POST['description'];
+    $mesaNo = $_POST['mesaNo'];
+    $date = $_POST['date'];
+    $plat1 = $_POST['plat1'];
+    $plat1price = $_POST['plat1price'];
+    $plat1 = $_POST['plat2'];
+    $plat1price = $_POST['plat2price'];
+    $plat1 = $_POST['plat3'];
+    $plat1price = $_POST['plat3price'];
+    $plat1 = $_POST['bebida'];
+    $plat1price = $_POST['bebidaprice'];
 
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
@@ -22,7 +34,9 @@ if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['description
     $db = new DB_CONNECT();
 
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO products(name, price, description) VALUES('$name', '$price', '$description')");
+    $result = mysql_query(" INSERT INTO orders (mesaNo, isActivo, created, plat1, plat1price, 
+        plat2, plat2price, plat3, plat3price, bebida, bebidaprice) 
+    VALUES ('$mesaNo', 'Y','$date','$plat1','$plat1price','$plat2','$plat2price','$plat3','$plat3price','$bebida','$bebidaprice' ) ");
 
     // check if row inserted or not
     if ($result) {
