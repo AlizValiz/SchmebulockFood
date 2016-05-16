@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+<!--    <TextView
+        android:id="@+id/precio_comida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="32dp"
+        android:paddingLeft="@dimen/espacio_norma_1"
+        android:text="Large Text"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="italic" />
+-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/miniatura_comida"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/altura_miniatura_comida"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accentinicioColor"
+        android:orientation="horizontal"
+        android:padding="@dimen/espacio_norma_1">
+
+
+    <TextView
+        android:id="@+id/nombre_comida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:paddingBottom="0.5dp"
+        android:paddingLeft="@dimen/espacio_norma_1"
+        android:text="Medium Text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>
