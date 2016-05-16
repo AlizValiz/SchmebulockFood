@@ -1,14 +1,15 @@
 <?php
 
 /*
- * Following code will create a new product row
- * All product details are read from HTTP Post Request
+ * aDominguez
+ * Se crea un WebService para los datos que se almacenan en la 
+ * tabla de ordenes
  */
 
-// array for JSON response
+// array para la respuesta del JSON
 $response = array();
 
-// check for required fields
+// campos requeridos
 if (isset($_POST['mesaNo']) && isset($_POST['date']) 
     && isset($_POST['plat1']) && isset($_POST['plat1price'])
     && isset($_POST['plat2']) && isset($_POST['plat2price'])
@@ -27,39 +28,39 @@ if (isset($_POST['mesaNo']) && isset($_POST['date'])
     $plat1 = $_POST['bebida'];
     $plat1price = $_POST['bebidaprice'];
 
-    // include db connect class
+    // Incluir coneccion a bd
     require_once __DIR__ . '/db_connect.php';
 
-    // connecting to db
+    // conectando a bd
     $db = new DB_CONNECT();
 
-    // mysql inserting a new row
+    // insertar linea
     $result = mysql_query(" INSERT INTO orders (mesaNo, isActivo, created, plat1, plat1price, 
         plat2, plat2price, plat3, plat3price, bebida, bebidaprice) 
     VALUES ('$mesaNo', 'Y','$date','$plat1','$plat1price','$plat2','$plat2price','$plat3','$plat3price','$bebida','$bebidaprice' ) ");
 
-    // check if row inserted or not
+    // Revisar si la linea se inserto correctamente
     if ($result) {
-        // successfully inserted into database
+        // inserccion correcta
         $response["success"] = 1;
         $response["message"] = "Product successfully created.";
 
-        // echoing JSON response
+        // respuesta en echo de JSON
         echo json_encode($response);
     } else {
-        // failed to insert row
+        // Fallo al insertar la linea
         $response["success"] = 0;
         $response["message"] = "Oops! An error occurred.";
         
-        // echoing JSON response
+        // respuesta en echo de JSON
         echo json_encode($response);
     }
 } else {
-    // required field is missing
+    // Falta un campo
     $response["success"] = 0;
-    $response["message"] = "Required field(s) is missing";
+    $response["message"] = "revisar los campos necesarios";
 
-    // echoing JSON response
+    // respuesta en echo de JSON
     echo json_encode($response);
 }
 ?>
