@@ -1,5 +1,6 @@
 package com.herprogramacion.restaurantericoparico.ui;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,9 @@ import android.widget.Toast;
 
 import com.herprogramacion.restaurantericoparico.R;
 import com.herprogramacion.restaurantericoparico.modelo.Comida;
+import com.herprogramacion.restaurantericoparico.modelo.JSONParser;
+
+import java.util.Date;
 
 /**
  * Fragmento para la sección de "Inicio"
@@ -35,7 +39,10 @@ public class FragmentoInicio extends Fragment {
         adaptador = new AdaptadorInicio(Comida.COMIDAS_POPULARES, new AdaptadorInicio.OnItemClickListener() {
             @Override
             public void onItemClick(Comida item) {
-                Toast.makeText(getContext(), "Item Clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Prueba, Lanzar datos a WebService", Toast.LENGTH_LONG).show();
+
+                AsyncTask<String, Void, String> execute = new JSONParser(getActivity()).
+                        execute("1", new Date().toString(), "Salmon", "120.50", "Pan", "2.80", "Ensalada", "60.99 ", "Refresco", "10.50");
             }
         });
         reciclador.setAdapter(adaptador);
