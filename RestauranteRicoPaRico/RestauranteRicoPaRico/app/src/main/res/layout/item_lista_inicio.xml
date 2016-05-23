@@ -3,55 +3,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <!-- <TextView android:id="@+id/precio_comida"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|bottom"
+    android:layout_marginBottom="32dp"
+    android:paddingLeft="@dimen/espacio_norma_1"
+    android:text="Large Text"
+    android:textColor="@android:color/white"
+    android:textSize="48sp"
+    android:textStyle="italic" /> -->
 
 
 
-<!--    <TextView
-        android:id="@+id/precio_comida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
-        android:layout_marginBottom="32dp"
-        android:paddingLeft="@dimen/espacio_norma_1"
-        android:text="Large Text"
-        android:textColor="@android:color/white"
-        android:textSize="48sp"
-        android:textStyle="italic" />
--->
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="1dp">
+    -<LinearLayout android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
-        android:id="@+id/miniatura_comida"
-        android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:scaleType="centerCrop" />
-
-        <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/accentinicioColor"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:scaleType="centerCrop"
+        android:id="@+id/miniatura_comida"/>
 
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+        android:padding="@dimen/espacio_norma_1"
+        android:background="@color/accentinicioColor">
 
     <TextView
-        android:id="@+id/nombre_comida"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
-        android:paddingBottom="0.5dp"
-        android:paddingLeft="@dimen/espacio_norma_1"
-        android:text="Medium Text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"/>
+        android:layout_width="wrap_content"
+        android:id="@+id/nombre_comida"
+        android:textSize="16sp"
+        android:textColor="@android:color/white" android:textAppearance="@style/TextAppearance.AppCompat.Title" android:text="Medium Text" android:paddingLeft="@dimen/espacio_norma_1" android:paddingBottom="0.5dp" android:layout_gravity="right|bottom"/>
 
-            <CheckBox
+            <!--<CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,7 +52,7 @@
                 android:paddingBottom="0.5dp"
                 android:gravity="right"
                 android:enabled="false"
-                android:checked="false" />
+                android:checked="false" />-->
 
         </LinearLayout>
     </LinearLayout>
