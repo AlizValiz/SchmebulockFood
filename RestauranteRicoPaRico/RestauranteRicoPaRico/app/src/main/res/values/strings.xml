@@ -27,5 +27,6 @@
     <string name="texto_cambiar_contrasena">Cambia de mesa</string>
     <string name="etiqueta_contrasena">Mesa</string>
     <string name="etiqueta_info_usuario">Historial</string>
+    <string name="title_activity_actividad_product_detail">ActividadProductDetail</string>
 
 </resources>

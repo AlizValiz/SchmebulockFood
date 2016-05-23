@@ -10,5 +10,9 @@
         <item name="android:windowBackground">@color/window_background</item>
     </style>
 
-    <style name="Theme.ConNavigationDrawer" parent="Base.AppTheme"/>
+    <style name="Theme.ConNavigationDrawer" parent="Base.AppTheme" />
+
+    <style name="Theme.RicoPaRico.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RicoPaRico.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -4,6 +4,7 @@ import com.herprogramacion.restaurantericoparico.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Modelo de datos estático para alimentar la aplicación
@@ -19,10 +20,13 @@ public class Comida {
         this.idDrawable = idDrawable;
     }
 
+    public static final String PRODUCT_INDEX = "PRODUCT_INDEX";
+
     public static final List<Comida> COMIDAS_POPULARES = new ArrayList<Comida>();
     public static final List<Comida> BEBIDAS = new ArrayList<>();
     public static final List<Comida> POSTRES = new ArrayList<>();
     public static final List<Comida> PLATILLOS = new ArrayList<>();
+    public static List<Comida> CART;
 
     static {
         COMIDAS_POPULARES.add(new Comida(37, "Tarro Cerveza", R.drawable.tarro_cerveza));
@@ -95,4 +99,11 @@ public class Comida {
         return idDrawable;
     }
 
+
+    public static List<Comida> getCart() {
+        if(CART == null) {
+            CART = new Vector<Comida>();
+        }
+        return CART;
+    }
 }

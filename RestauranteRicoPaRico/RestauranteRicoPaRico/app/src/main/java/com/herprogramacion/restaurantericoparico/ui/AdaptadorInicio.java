@@ -32,10 +32,10 @@ public class AdaptadorInicio
   //          precio = (TextView) v.findViewById(R.id.precio_comida);
             imagen = (ImageView) v.findViewById(R.id.miniatura_comida);
         }
-        public void bind(final Comida item, final OnItemClickListener listener) {
+        public void bind(final Comida item, final OnItemClickListener listener, final int position) {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
-                    listener.onItemClick(item);
+                    listener.onItemClick(item, position);
                 }
             });
         }
@@ -46,7 +46,7 @@ public class AdaptadorInicio
     }
 
     public interface OnItemClickListener {
-        void onItemClick(Comida item);
+        void onItemClick(Comida item, int position);
     }
 
     private List<Comida> items;
@@ -80,7 +80,7 @@ public class AdaptadorInicio
  //       viewHolder.precio.setText("$" + item.getPrecio());
         viewHolder.nombre.setText(item.getNombre() + " " + "$" + item.getPrecio() );
 
-        viewHolder.bind(items.get(i), listener);
+        viewHolder.bind(items.get(i), listener, i);
 
     }
 

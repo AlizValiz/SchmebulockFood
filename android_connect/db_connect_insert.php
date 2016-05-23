@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("mysql13.000webhost.com","a2957838_anduser","mypassword123","a2957838_android");
+$con=mysqli_connect("localhost","admin","admin","orders");
 if (mysqli_connect_errno($con))
 {
    echo '{"query_result":"ERROR"}';
