@@ -28,7 +28,7 @@
     <ImageView
         android:id="@+id/miniatura_comida"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/altura_miniatura_comida"
+        android:layout_height="150dp"
         android:scaleType="centerCrop" />
 
         <LinearLayout
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:background="@color/accentinicioColor"
         android:orientation="horizontal"
-        android:padding="@dimen/espacio_norma_1">
+        android:padding="16dp">
 
 
     <TextView

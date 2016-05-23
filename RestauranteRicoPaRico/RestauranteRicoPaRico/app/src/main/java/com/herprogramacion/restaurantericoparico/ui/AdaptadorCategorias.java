@@ -63,7 +63,7 @@ public class AdaptadorCategorias
                 .centerCrop()
                 .into(viewHolder.imagen);
 //        viewHolder.precio.setText("$" + item.getPrecio());
-        viewHolder.nombre.setText(item.getNombre() + "$" + item.getPrecio());
+        viewHolder.nombre.setText(item.getNombre() + " " + "$" + item.getPrecio());
 
     }
 
