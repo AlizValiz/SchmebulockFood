@@ -10,9 +10,10 @@ import java.util.Vector;
  * Modelo de datos estático para alimentar la aplicación
  */
 public class Comida {
-    private float precio;
-    private String nombre;
-    private int idDrawable;
+    public float precio;
+    public String nombre;
+    public int idDrawable;
+    public boolean selected;
 
     public Comida(float precio, String nombre, int idDrawable) {
         this.precio = precio;

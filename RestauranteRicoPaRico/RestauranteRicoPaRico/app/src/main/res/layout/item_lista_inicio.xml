@@ -31,7 +31,7 @@
         android:layout_height="@dimen/altura_miniatura_comida"
         android:scaleType="centerCrop" />
 
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/accentinicioColor"
@@ -51,7 +51,19 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"/>
 
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/espacio_norma_1"
+                android:paddingBottom="0.5dp"
+                android:gravity="right"
+                android:enabled="false"
+                android:checked="false" />
+
+        </LinearLayout>
     </LinearLayout>
 
 
