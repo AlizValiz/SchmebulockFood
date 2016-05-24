@@ -83,7 +83,7 @@ public class AdaptadorProducto extends BaseAdapter{
                 item.productCheckbox.setChecked(false);
         }
 
-        return null;
+        return convertView;
     }
 }
 

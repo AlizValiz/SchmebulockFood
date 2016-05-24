@@ -38,11 +38,7 @@ public class FragmentoInicio extends Fragment {
         adaptador = new AdaptadorInicio(Comida.COMIDAS_POPULARES, new AdaptadorInicio.OnItemClickListener() {
             @Override
             public void onItemClick(Comida item, int position) {
-/*                Toast.makeText(getContext(), "Prueba, Lanzar datos a WebService", Toast.LENGTH_LONG).show();
 
-                AsyncTask<String, Void, String> execute = new JSONParser(getActivity()).
-                        execute("1", new Date().toString(), "Salmon", "120.50", "Pan", "2.80", "Ensalada", "60.99 ", "Refresco", "10.50");
-        */
                 Intent productDetailsIntent = new Intent(getContext(), ActividadProductDetail.class);
                 productDetailsIntent.putExtra(Comida.PRODUCT_INDEX, position);
                 startActivity(productDetailsIntent);

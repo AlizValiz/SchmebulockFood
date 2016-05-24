@@ -1,5 +1,6 @@
 package com.herprogramacion.restaurantericoparico.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -111,8 +112,8 @@ public class ActividadPrincipal extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.action_carrito:
-                drawerLayout.openDrawer(GravityCompat.START);
-                //Fragment fragmentoGenerico = new FragmentoCarrito();
+                Intent viewShoppingCartIntent = new Intent(getBaseContext(), ActividadCarrito.class);
+                startActivity(viewShoppingCartIntent);
         }
         return super.onOptionsItemSelected(item);
     }

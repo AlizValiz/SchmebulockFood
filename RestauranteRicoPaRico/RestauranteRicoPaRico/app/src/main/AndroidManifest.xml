@@ -31,7 +31,14 @@
         <activity
             android:name=".ui.ActividadProductDetail"
             android:label="@string/title_activity_actividad_product_detail"
-            android:theme="@style/Theme.RicoPaRico"></activity>
+            android:theme="@style/Theme.RicoPaRico">
+        </activity>
+        <activity
+            android:name=".ui.ActividadCarrito"
+            android:label="@string/etiqueta_carrito"
+            android:theme="@style/Theme.RicoPaRico"
+            >
+        </activity>
     </application>
 
 </manifest>

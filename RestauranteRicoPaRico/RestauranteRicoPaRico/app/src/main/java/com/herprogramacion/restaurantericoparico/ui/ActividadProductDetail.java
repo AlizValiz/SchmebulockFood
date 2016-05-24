@@ -30,6 +30,7 @@ public class ActividadProductDetail extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         List<Comida> catalog = Comida.COMIDAS_POPULARES;
         final List<Comida> cart = Comida.getCart();
 
@@ -48,6 +49,7 @@ public class ActividadProductDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                cart.add(selectedProduct);
+                finish();
             }
         });
 

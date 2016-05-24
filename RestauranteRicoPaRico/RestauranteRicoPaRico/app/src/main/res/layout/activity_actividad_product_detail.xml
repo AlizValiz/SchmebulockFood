@@ -24,12 +24,14 @@
             android:textColor="@color/color_light" />
        <!-- android:theme="@style/Theme.RicoPaRico.AppBarOverlay">-->
 
-      <!--  <android.support.v7.widget.Toolbar
+        <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.RicoPaRico.PopupOverlay" />-->
+            app:popupTheme="@style/Theme.RicoPaRico.PopupOverlay" />
+
+
 
    <!-- </android.support.design.widget.AppBarLayout>-->
     </android.support.design.widget.AppBarLayout>

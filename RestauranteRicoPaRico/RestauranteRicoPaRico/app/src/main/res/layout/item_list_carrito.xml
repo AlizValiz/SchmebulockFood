@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="1dp">
+    android:orientation="vertical" android:layout_height="fill_parent"
+    android:layout_width="fill_parent" android:background="#ffffff">
 
-
-    <LinearLayout
-        android:layout_width="192dp"
-        android:layout_height="192dp"
-        >
-
-
-        <ImageView
-            android:id="@+id/miniatura_comida"
-            android:layout_width="167dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:onClick="comidasave"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="167dp"
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/accentColor"
-        android:orientation="horizontal"
-        android:padding="@dimen/espacio_norma_1"
+        android:textColor="#000000"
+        android:textSize="24dip"
+        android:layout_margin="5dip"
+        android:text="Orden">
+
+    </TextView>
+
+    <ListView
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/ListViewCatalog"
+        android:layout_width="fill_parent"
+        android:background="#ffffff"
+        android:cacheColorHint="#ffffff"
+        android:clickable="true"
+        android:choiceMode="multipleChoice"
         >
 
-        <TextView
-            android:id="@+id/nombre_comida"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="right"
-            android:text="Nombre"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
-            android:textSize="12sp"
-            android:layout_gravity="right"/>
+    </ListView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dip"
+        android:id="@+id/LinearLayoutCheckout"
+        android:layout_gravity="right">
 
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="borrar Producto"
+            android:id="@+id/removeItem" />
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedir Orden">
+
+        </Button>
     </LinearLayout>
+
 
 </LinearLayout>
