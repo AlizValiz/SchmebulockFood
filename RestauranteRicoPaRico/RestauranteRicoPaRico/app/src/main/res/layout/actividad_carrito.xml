@@ -2,17 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_height="fill_parent"
     android:layout_width="fill_parent" android:background="#ffffff">
-
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/background_header_seccion_inicio"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Carrito"
+        android:textSize="18dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/color_light" />
+   <!-- <TextView
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:textSize="24dip"
         android:layout_margin="5dip"
-        android:text="Lista a Ordenar">
+        android:text="Shopping Cart Lista a Ordenar"/>-->
 
-    </TextView>
     <ListView
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -35,7 +45,7 @@
         <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ButtonRemoveFromCart"
-            android:text="Remover de Orden">
+            android:text="Remover la Orden">
 
         </Button>
         <Button
