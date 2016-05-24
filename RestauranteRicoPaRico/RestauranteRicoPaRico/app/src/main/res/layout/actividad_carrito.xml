@@ -10,7 +10,7 @@
         android:textColor="#000000"
         android:textSize="24dip"
         android:layout_margin="5dip"
-        android:text="Shopping Cart">
+        android:text="Lista a Ordenar">
 
     </TextView>
     <ListView
@@ -35,14 +35,14 @@
         <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ButtonRemoveFromCart"
-            android:text="Remove from Cart">
+            android:text="Remover de Orden">
 
         </Button>
         <Button
-            android:id="@+id/Button02"
+            android:id="@+id/sendData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Proceed to Checkout">
+            android:text="Mandar Orden">
 
         </Button>
     </LinearLayout>
