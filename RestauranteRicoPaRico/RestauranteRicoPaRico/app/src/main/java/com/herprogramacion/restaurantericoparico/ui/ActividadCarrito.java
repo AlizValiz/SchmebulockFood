@@ -103,7 +103,6 @@ public class ActividadCarrito extends Activity {
         });
 
     }
-
 //    private static final String INDICE_SECCION
 //            = "com.restaurantericoparico.FragmentoCategoriasTab.extra.INDICE_SECCION";
 
