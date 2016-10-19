@@ -48,14 +48,13 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        System.out.println("Datos lanzados al cliente");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        List<OrderBean> orderList= new ArrayList<>();
+        final List<OrderBean> orderList= new ArrayList<>();
         
         Connection conn = ConnectDB.getConnection();
         
@@ -102,21 +101,22 @@ public class FXMLDocumentController implements Initializable {
 //        tables.add("Mesa 1");
 //        tables.add("Mesa 2");
 //        tables.add("Mesa 3");
-orderList.stream().forEach((list) -> {
+for(OrderBean list : orderList){
     tables.add(String.valueOf(list.getMesaNo()));
-        });
+        }
 
         tableLView.setItems(tables);
         tableLView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         tableLView.getSelectionModel().getSelectedItem();
         
-        ObservableList<String> orders = FXCollections.observableArrayList();
+        final ObservableList<String> orders = FXCollections.observableArrayList();
         
-        OrderBean dataPriceOrder = new OrderBean();
+        final OrderBean dataPriceOrder = new OrderBean();
         tableLView.getSelectionModel().selectedItemProperty()
                 .addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                orders.clear();
                 for (OrderBean list: orderList){
                     if(list.isActivo()){
                         if(list.getMesaNo()==Integer.parseInt(newValue)){

@@ -58,7 +58,7 @@ public class JSONParser extends AsyncTask<String, Void, String> {
             data += "&bebida=" + URLEncoder.encode(bebida, "UTF-8");
             data += "&bebidaprice=" + URLEncoder.encode(bebidaprice, "UTF-8");
 
-            link = "http://192.168.0.12/phpConector/db_Connect_Insert.php" + data;
+            link = "http://192.168.0.123/phpConector/db_Connect_Insert.php" + data;
             URL url = new URL(link);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 

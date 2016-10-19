@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="701.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restaurant.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="715.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restaurant.FXMLDocumentController">
     <children>
         <Button fx:id="takeOrder" layoutX="123.0" layoutY="583.0" onAction="#handleButtonAction" text="Tomar Orden" />
         <Label fx:id="label" layoutX="655.0" layoutY="246.0" minHeight="16" minWidth="69" text="Subtotal" />
@@ -17,16 +17,15 @@
       <ListView fx:id="orderLView" layoutX="252.0" layoutY="120.0" prefHeight="426.0" prefWidth="324.0" />
       <Label layoutX="61.0" layoutY="85.0" prefHeight="17.0" prefWidth="45.0" text="Mesa" />
       <Label layoutX="252.0" layoutY="85.0" prefHeight="17.0" prefWidth="45.0" text="Orden" />
-      <AmbientLight color="CHARTREUSE" lightOn="true" />
       <ScrollBar layoutX="562.0" layoutY="120.0" orientation="VERTICAL" prefHeight="426.0" prefWidth="14.0" />
       <Separator layoutX="618.0" layoutY="119.0" prefWidth="200.0" />
       <Label layoutX="656.0" layoutY="168.0" text="Precio Unitario" />
       <Label layoutX="656.0" layoutY="333.0" text="Impuestos" />
       <Label layoutX="656.0" layoutY="425.0" text="Total" />
-      <TextField fx:id="unitPrice" layoutX="650.0" layoutY="185.0" />
-      <TextField fx:id="subTotal" layoutX="650.0" layoutY="263.0" />
-      <TextField fx:id="taxAmt" layoutX="650.0" layoutY="350.0" />
-      <TextField fx:id="grandTotal" layoutX="650.0" layoutY="442.0" />
+      <TextField fx:id="unitPrice" layoutX="650.0" layoutY="189.0" />
+      <TextField fx:id="subTotal" layoutX="650.0" layoutY="267.0" />
+      <TextField fx:id="taxAmt" layoutX="650.0" layoutY="354.0" />
+      <TextField fx:id="grandTotal" layoutX="650.0" layoutY="455.0" />
       <ImageView fx:id="imagVie" fitHeight="111.0" fitWidth="149.0" layoutX="669.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="10.0">
               <image>
                 <Image url="@wd5NDdfV.jpg" />
